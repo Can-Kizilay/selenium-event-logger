@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>fileName</key>
+            <defaultValue>defaultTest</defaultValue>
+        </discriminator>
+        <discriminator>
+            <key>logPath</key>
+            <defaultValue>logs</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-${fileName}" class="ch.qos.logback.core.FileAppender">
+                <file>${logPath}/${fileName}.log</file>
+                <layout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%d{dd-MM-yyyy} | %d{HH:mm:ss:SSS} | %-5level| %msg%n%rEx</pattern>
+                </layout>
+            </appender>
+        </sift>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                <!--                %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n-->
+                <pattern>%d{dd-MM-yyyy} | %d{HH:mm:ss:SSS} | %-5level| %msg%n%rEx</pattern>
+            </Pattern>
+        </layout>
+    </appender>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%logger %d{HH:mm:ss.SSS} %p %m %ex%n</pattern>
+        </encoder>
+    </appender>
+
+
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %p %m %ex%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Restrict logging for browser-level -->
+    <logger name="io.netty" level="WARN" />
+    <logger name="org.asynchttpclient.netty" level="WARN" />
+    <root level="ALL">
+        <appender-ref ref="SIFT"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
