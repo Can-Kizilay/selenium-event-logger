@@ -19,11 +19,12 @@ public class LogManager {
 
         try {
             File file = null;
-            file = new File(logPath + "/" + fileName + ".log");
+            file = new File(fileName + ".log");
             file.delete();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        MDC.put("logPath", logPath);
         MDC.put("fileName", fileName);
     }
 }

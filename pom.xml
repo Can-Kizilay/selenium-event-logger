@@ -6,7 +6,7 @@
 
     <groupId>com.cankizilay.selogger</groupId>
     <artifactId>selenium-event-logger</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>This library is for logging selenium events and test steps easily</description>
