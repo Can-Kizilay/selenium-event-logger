@@ -1,4 +1,4 @@
-package com.cankizilay.SeleniumEventsManager;
+package com.cankizilay.logger;
 
 import com.cankizilay.listeners.DriverEventHandler;
 import org.openqa.selenium.WebDriver;
@@ -10,13 +10,13 @@ import java.io.File;
 public class LogManager {
 
 
-    public static WebDriver addLogger(WebDriver driver) {
+     static WebDriver addLogger(WebDriver driver) {
         return new EventFiringDecorator(new DriverEventHandler()).decorate(driver);
     }
 
-    public static void setLogFileName(String fileName) {
+     static void setLogFileName(String fileName) {
         String logPath = SettingsManager.settings().getLogPath();
-
+        if (logPath == null){logPath = "logs";};
         try {
             File file = null;
             file = new File(fileName + ".log");
@@ -24,7 +24,6 @@ public class LogManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        MDC.put("logPath", logPath);
-        MDC.put("fileName", fileName);
+        MDC.put("fileName", logPath + "/" + fileName);
     }
 }

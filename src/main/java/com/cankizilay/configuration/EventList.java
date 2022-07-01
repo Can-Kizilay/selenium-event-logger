@@ -10,31 +10,31 @@ import lombok.Setter;
 public class EventList {
 
     //WebDriver
-    private String beforeGet;
-    private String beforeGetCurrentUrl;
-    private String beforeGetTitle;
-    private String beforeFindElement;
-    private String beforeFindElements;
-    private String beforeGetPageSource;
-    private String beforeClose;
-    private String beforeQuit;
-    private String beforeExecuteScript;
+    private Boolean beforeGet;
+    private Boolean beforeGetCurrentUrl;
+    private Boolean beforeGetTitle;
+    private Boolean beforeFindElement;
+    private Boolean beforeFindElements;
+    private Boolean beforeGetPageSource;
+    private Boolean beforeClose;
+    private Boolean beforeQuit;
+    private Boolean beforeExecuteScript;
 
     //WebElement
-    private String beforeClick;
-    private String beforeSubmit;
-    private String beforeSendKeys;
-    private String beforeClear;
-    private String beforeGetTagName;
-    private String beforeGetAttribute;
-    private String beforeIsSelected;
-    private String beforeIsEnabled;
-    private String beforeGetText;
-    private String beforeIsDisplayed;
+    private Boolean beforeClick;
+    private Boolean beforeSubmit;
+    private Boolean beforeSendKeys;
+    private Boolean beforeClear;
+    private Boolean beforeGetTagName;
+    private Boolean beforeGetAttribute;
+    private Boolean beforeIsSelected;
+    private Boolean beforeIsEnabled;
+    private Boolean beforeGetText;
+    private Boolean beforeIsDisplayed;
 
     //Navigation
-    private String beforeTo;
-    private String beforeBack;
-    private String beforeForward;
-    private String beforeRefresh;
+    private Boolean beforeTo;
+    private Boolean beforeBack;
+    private Boolean beforeForward;
+    private Boolean beforeRefresh;
 }

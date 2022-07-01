@@ -6,7 +6,7 @@
 
     <groupId>com.cankizilay.selogger</groupId>
     <artifactId>selenium-event-logger</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.11</version>
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>This library is for logging selenium events and test steps easily</description>
@@ -22,8 +22,8 @@
         <selenium-java.version>4.1.4</selenium-java.version>
         <logback.version>1.2.3</logback.version>
         <lombok.version>1.18.20</lombok.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>

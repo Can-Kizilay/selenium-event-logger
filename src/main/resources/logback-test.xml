@@ -6,13 +6,9 @@
             <key>fileName</key>
             <defaultValue>defaultTest</defaultValue>
         </discriminator>
-        <discriminator>
-            <key>logPath</key>
-            <defaultValue>logs</defaultValue>
-        </discriminator>
         <sift>
             <appender name="FILE-${fileName}" class="ch.qos.logback.core.FileAppender">
-                <file>${logPath}/${fileName}.log</file>
+                <file>${fileName}.log</file>
                 <layout class="ch.qos.logback.classic.PatternLayout">
                     <pattern>%d{dd-MM-yyyy} | %d{HH:mm:ss:SSS} | %-5level| %msg%n%rEx</pattern>
                 </layout>
