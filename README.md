@@ -1,18 +1,18 @@
 # Selenium Event Logger
 This project provides log management for **Selenium** projects. It provides logging your Selenium events and scenarios based on **logback** library
 
-#Usage
+# Usage
 
-##Maven Dependency
+## Maven Dependency
         <dependency>
             <groupId>com.cankizilay.selogger</groupId>
             <artifactId>selenium-event-logger</artifactId>
             <version>$LATEST_VERSION</version>
         </dependency>
-##Config file 
+## Config file 
 Project needs `events.properties` under `main/resources` for toggling the logs and other settings.
 
-###Config settings
+### Config settings
 
 Example properties is: 
 
@@ -50,7 +50,7 @@ beforeForward = true
 beforeRefresh = true
 ```
 
-##Driver Setup
+## Driver Setup
 Logger should be added to the driver.
 
 Example: 
@@ -59,7 +59,7 @@ Example:
 Webdriver driver = Logger.setLogger(new ChromeDriver());
 ```
 
-##Log File
+## Log File
 
 For test based logging, log file should be set before tests step.
 
@@ -74,7 +74,8 @@ Logger.unsetLogFileName(My scenario);
 ```
 
 ![img.png](images/refactor.png)
-##Logging steps
+
+## Logging steps
 ![img.png](images/consoleLogging.png)
 
 `Logger.setLogFilesName(String logFileName)`
