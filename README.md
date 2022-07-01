@@ -1,5 +1,5 @@
 # Selenium Event Logger
-This project provides log management for **Selenium** projects. It provides logging your Selenium events and scenarios based on **logback** library
+This project provides log management for **Selenium** projects. It provides logging of your Selenium events and scenarios based on **logback** library
 
 # Usage
 
@@ -14,7 +14,7 @@ Project needs `events.properties` under `main/resources` for toggling the logs a
 
 ### Config settings
 
-Example properties is: 
+Example properties are: 
 
 ```
 //Settings
@@ -51,7 +51,7 @@ beforeRefresh = true
 ```
 
 ## Driver Setup
-Logger should be added to the driver.
+The Logger should be added to the driver.
 
 Example: 
 
@@ -61,13 +61,13 @@ Webdriver driver = Logger.setLogger(new ChromeDriver());
 
 ## Log File
 
-For test based logging, log file should be set before tests step.
+For test-based logging, the log file should be set before the tests step.
 
 ```
 Logger.setLogFilesName("My scenario");
 ```
 
-It is recommended finishing tests with:
+It is recommended to finish tests with:
 
 ```
 Logger.unsetLogFileName(My scenario);
