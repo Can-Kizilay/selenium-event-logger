@@ -3,12 +3,6 @@ This project provides log management for **Selenium** projects. It provides logg
 
 # Usage
 
-## Maven Dependency
-        <dependency>
-            <groupId>com.cankizilay.selogger</groupId>
-            <artifactId>selenium-event-logger</artifactId>
-            <version>$LATEST_VERSION</version>
-        </dependency>
 ## Config file 
 Project needs `events.properties` under `main/resources` for toggling the logs and other settings.
 
